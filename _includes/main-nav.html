@@ -1,0 +1,28 @@
+<!-- header Nav Start -->
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     </button>
+     <a class="navbar-brand" href="index.html">
+        <img src="https://s3.us-east-1.amazonaws.com/thestateofstartup.com/media/TSOS-Logo-Trans-1436-x-366.png" alt="Logo">
+     </a>
+    </div>
+     <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-right">
+
+           {% for tab in site.data.navigation %}
+          <a href="{{ tab.link }}" {% if page.url == tab.link %}style="background-color: #f3f3f3;"{% endif %}>
+             {{ tab.name }}
+         </a>
+            {% endfor %}
+        </div>
+     </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+ </nav>
